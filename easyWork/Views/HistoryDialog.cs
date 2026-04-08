@@ -23,8 +23,8 @@ namespace easyWork.Views
         {
             InitializeComponent();
             
-            // 设置窗体启动位置为父窗体中央
-            this.StartPosition = FormStartPosition.CenterParent;
+            // 设置窗体启动位置为屏幕中央
+            this.StartPosition = FormStartPosition.CenterScreen;
             
             // 设置窗体最小尺寸
             this.MinimumSize = new Size(900, 650);

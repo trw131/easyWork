@@ -18,6 +18,7 @@ namespace easyWork
     {
         private readonly WorkLogService _logService;
         private System.Windows.Forms.Timer _autoSaveTimer;
+        private HistoryDialog _historyDialog;
 
         protected MainViewModel()
         {
@@ -145,15 +146,104 @@ namespace easyWork
         }
 
         /// <summary>
+        /// 复制上周日志(Markdown)
+        /// </summary>
+        public void CopyLastWeekLogAsMarkdown()
+        {
+            try
+            {
+                DateTime lastWeekStart = GetLastWeekStart(DateTime.Today);
+                DateTime lastWeekEnd = lastWeekStart.AddDays(6);
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendLine($"# 上周工作日志（{lastWeekStart:yyyy-MM-dd} ~ {lastWeekEnd:yyyy-MM-dd}）");
+                sb.AppendLine();
+
+                for (DateTime date = lastWeekStart; date <= lastWeekEnd; date = date.AddDays(1))
+                {
+                    WorkLog log = _logService.LoadLog(date);
+
+                    sb.AppendLine($"## {date:yyyy-MM-dd} {GetChineseWeekText(date)}");
+                    sb.AppendLine();
+
+                    if (string.IsNullOrWhiteSpace(log.Content))
+                    {
+                        sb.AppendLine("- 暂无日志");
+                    }
+                    else
+                    {
+                        sb.AppendLine(log.Content.Trim());
+                    }
+
+                    sb.AppendLine();
+                }
+
+                Clipboard.SetText(sb.ToString().TrimEnd());
+            }
+            catch
+            {
+                // 静默处理错误
+            }
+        }
+
+        /// <summary>
         /// 查看历史日志
         /// </summary>
         public void ViewHistory()
         {
-            HistoryDialog dialog = new HistoryDialog();
-            dialog.ShowDialog();
-            
-            // 历史对话框关闭后,刷新今日日志
+            if (_historyDialog == null || _historyDialog.IsDisposed)
+            {
+                _historyDialog = new HistoryDialog();
+                _historyDialog.FormClosed += OnHistoryDialogClosed;
+                _historyDialog.Show();
+                return;
+            }
+
+            if (_historyDialog.WindowState == FormWindowState.Minimized)
+            {
+                _historyDialog.WindowState = FormWindowState.Normal;
+            }
+
+            _historyDialog.Activate();
+        }
+
+        private void OnHistoryDialogClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_historyDialog != null)
+            {
+                _historyDialog.FormClosed -= OnHistoryDialogClosed;
+                _historyDialog = null;
+            }
+
             RefreshTodayLog();
+        }
+
+        private DateTime GetLastWeekStart(DateTime referenceDate)
+        {
+            int daysSinceMonday = ((int)referenceDate.DayOfWeek + 6) % 7;
+            DateTime currentWeekStart = referenceDate.Date.AddDays(-daysSinceMonday);
+            return currentWeekStart.AddDays(-7);
+        }
+
+        private string GetChineseWeekText(DateTime date)
+        {
+            switch (date.DayOfWeek)
+            {
+                case DayOfWeek.Monday:
+                    return "星期一";
+                case DayOfWeek.Tuesday:
+                    return "星期二";
+                case DayOfWeek.Wednesday:
+                    return "星期三";
+                case DayOfWeek.Thursday:
+                    return "星期四";
+                case DayOfWeek.Friday:
+                    return "星期五";
+                case DayOfWeek.Saturday:
+                    return "星期六";
+                default:
+                    return "星期日";
+            }
         }
 
         /// <summary>
@@ -165,6 +255,14 @@ namespace easyWork
             {
                 _autoSaveTimer.Stop();
                 _autoSaveTimer.Dispose();
+            }
+
+            if (_historyDialog != null && !_historyDialog.IsDisposed)
+            {
+                _historyDialog.FormClosed -= OnHistoryDialogClosed;
+                _historyDialog.Close();
+                _historyDialog.Dispose();
+                _historyDialog = null;
             }
             
             // 最后保存一次

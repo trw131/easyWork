@@ -215,7 +215,7 @@ namespace easyWork.Views
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.layoutControl1);
             this.Name = "HistoryDialog";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "历史日志查看";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

@@ -9,6 +9,7 @@ D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Printing.v21.2
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Sparkline.v21.2.Core.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Utils.v21.2.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.XtraEditors.v21.2.dll
+D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.XtraLayout.v21.2.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Pdf.v21.2.Core.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Pdf.v21.2.Drawing.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Data.Desktop.v21.2.xml
@@ -18,6 +19,7 @@ D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Utils.v21.2.xm
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Sparkline.v21.2.Core.xml
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.XtraEditors.v21.2.xml
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Printing.v21.2.Core.xml
+D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.XtraLayout.v21.2.xml
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Pdf.v21.2.Core.xml
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.Pdf.v21.2.Drawing.xml
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\de\DevExpress.Data.v21.2.resources.dll
@@ -40,6 +42,10 @@ D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\de\DevExpress.Printing.v2
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\es\DevExpress.Printing.v21.2.Core.resources.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\ja\DevExpress.Printing.v21.2.Core.resources.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\ru\DevExpress.Printing.v21.2.Core.resources.dll
+D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\de\DevExpress.XtraLayout.v21.2.resources.dll
+D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\es\DevExpress.XtraLayout.v21.2.resources.dll
+D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\ja\DevExpress.XtraLayout.v21.2.resources.dll
+D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\ru\DevExpress.XtraLayout.v21.2.resources.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\de\DevExpress.Pdf.v21.2.Core.resources.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\es\DevExpress.Pdf.v21.2.Core.resources.dll
 D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\ja\DevExpress.Pdf.v21.2.Core.resources.dll
@@ -54,9 +60,3 @@ D:\WORK\工作资料\Tools\easyWork\easyWork\obj\Debug\easyWork.csproj.Up2Date
 D:\WORK\工作资料\Tools\easyWork\easyWork\obj\Debug\easyWork.exe
 D:\WORK\工作资料\Tools\easyWork\easyWork\obj\Debug\easyWork.pdb
 D:\WORK\工作资料\Tools\easyWork\easyWork\obj\Debug\easyWork.exe.config
-D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.XtraLayout.v21.2.dll
-D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\DevExpress.XtraLayout.v21.2.xml
-D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\de\DevExpress.XtraLayout.v21.2.resources.dll
-D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\es\DevExpress.XtraLayout.v21.2.resources.dll
-D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\ja\DevExpress.XtraLayout.v21.2.resources.dll
-D:\WORK\工作资料\Tools\easyWork\easyWork\bin\Debug\ru\DevExpress.XtraLayout.v21.2.resources.dll

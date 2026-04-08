@@ -40,6 +40,7 @@ namespace easyWork
             
             // 绑定按钮命令
             fluent.BindCommand(btnExport, x => x.ExportMonthlyReport());
+            fluent.BindCommand(btnExportLastWeek, x => x.CopyLastWeekLogAsMarkdown());
             fluent.BindCommand(btnHistory, x => x.ViewHistory());
             fluent.BindCommand(btnCopy, x => x.CopyTodayLog());
         }

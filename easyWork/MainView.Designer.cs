@@ -34,6 +34,7 @@
             this.lblCurrentDate = new DevExpress.XtraEditors.LabelControl();
             this.memoEditLog = new DevExpress.XtraEditors.MemoEdit();
             this.btnExport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExportLastWeek = new DevExpress.XtraEditors.SimpleButton();
             this.btnHistory = new DevExpress.XtraEditors.SimpleButton();
             this.btnCopy = new DevExpress.XtraEditors.SimpleButton();
             this.lblLastSaved = new DevExpress.XtraEditors.LabelControl();
@@ -42,6 +43,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -54,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -80,6 +83,7 @@
             this.layoutControl1.Controls.Add(this.lblCurrentDate);
             this.layoutControl1.Controls.Add(this.memoEditLog);
             this.layoutControl1.Controls.Add(this.btnExport);
+            this.layoutControl1.Controls.Add(this.btnExportLastWeek);
             this.layoutControl1.Controls.Add(this.btnHistory);
             this.layoutControl1.Controls.Add(this.btnCopy);
             this.layoutControl1.Controls.Add(this.lblLastSaved);
@@ -139,6 +143,21 @@
             this.btnExport.TabIndex = 6;
             this.btnExport.Text = "导出月度报表";
             // 
+            // btnExportLastWeek
+            // 
+            this.btnExportLastWeek.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnExportLastWeek.Appearance.Font = new System.Drawing.Font("微软雅黑", 8.5F);
+            this.btnExportLastWeek.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnExportLastWeek.Appearance.Options.UseBackColor = true;
+            this.btnExportLastWeek.Appearance.Options.UseFont = true;
+            this.btnExportLastWeek.Appearance.Options.UseForeColor = true;
+            this.btnExportLastWeek.Location = new System.Drawing.Point(115, 450);
+            this.btnExportLastWeek.Name = "btnExportLastWeek";
+            this.btnExportLastWeek.Size = new System.Drawing.Size(105, 36);
+            this.btnExportLastWeek.StyleController = this.layoutControl1;
+            this.btnExportLastWeek.TabIndex = 10;
+            this.btnExportLastWeek.Text = "复制上周日志MD";
+            // 
             // btnHistory
             // 
             this.btnHistory.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -147,7 +166,7 @@
             this.btnHistory.Appearance.Options.UseBackColor = true;
             this.btnHistory.Appearance.Options.UseFont = true;
             this.btnHistory.Appearance.Options.UseForeColor = true;
-            this.btnHistory.Location = new System.Drawing.Point(115, 450);
+            this.btnHistory.Location = new System.Drawing.Point(228, 450);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(95, 36);
             this.btnHistory.StyleController = this.layoutControl1;
@@ -162,7 +181,7 @@
             this.btnCopy.Appearance.Options.UseBackColor = true;
             this.btnCopy.Appearance.Options.UseFont = true;
             this.btnCopy.Appearance.Options.UseForeColor = true;
-            this.btnCopy.Location = new System.Drawing.Point(218, 450);
+            this.btnCopy.Location = new System.Drawing.Point(331, 450);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(95, 36);
             this.btnCopy.StyleController = this.layoutControl1;
@@ -194,6 +213,7 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
+            this.layoutControlItem7,
             this.layoutControlItem5,
             this.layoutControlItem6,
             this.emptySpaceItem1});
@@ -235,17 +255,27 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnHistory;
-            this.layoutControlItem4.Location = new System.Drawing.Point(103, 436);
+            this.layoutControlItem4.Location = new System.Drawing.Point(216, 436);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(103, 44);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             this.layoutControlItem4.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 6, 2, 2);
             // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.btnExportLastWeek;
+            this.layoutControlItem7.Location = new System.Drawing.Point(103, 436);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(113, 44);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 6, 2, 2);
+            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnCopy;
-            this.layoutControlItem6.Location = new System.Drawing.Point(206, 436);
+            this.layoutControlItem6.Location = new System.Drawing.Point(319, 436);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(103, 44);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -264,9 +294,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(309, 436);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(422, 436);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(237, 44);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(124, 44);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // MainView
@@ -289,6 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -303,6 +334,7 @@
         private DevExpress.XtraEditors.LabelControl lblCurrentDate;
         private DevExpress.XtraEditors.MemoEdit memoEditLog;
         private DevExpress.XtraEditors.SimpleButton btnExport;
+        private DevExpress.XtraEditors.SimpleButton btnExportLastWeek;
         private DevExpress.XtraEditors.SimpleButton btnHistory;
         private DevExpress.XtraEditors.SimpleButton btnCopy;
         private DevExpress.XtraEditors.LabelControl lblLastSaved;
@@ -311,6 +343,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
